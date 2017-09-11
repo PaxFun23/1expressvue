@@ -10,9 +10,9 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/',(req,res)=>{
+app.post('/register',(req,res)=>{
     res.json({
-        msg:"HI"
+        message:'Hello ' + req.body.email
     });
 });
 
